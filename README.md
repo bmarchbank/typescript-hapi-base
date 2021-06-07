@@ -1,6 +1,6 @@
-# typescript-node-base
+# typescript-hapi-base
 
-Basic TypeScript starting repository for Node.JS projects with some basic building & live reload scripts.
+Basic TypeScript starting repository for Hapi.JS projects with some basic building & live reload scripts.
 
 ## Prerequisites
 * Node version 14
