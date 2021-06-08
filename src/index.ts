@@ -1,3 +1,7 @@
+/**
+ * Entrypoint file for the HAPI Server
+ */
+
 // use dotenv to support ".env" files
 import { config as dotenv } from 'dotenv';
 dotenv();

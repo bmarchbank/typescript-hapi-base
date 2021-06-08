@@ -1,3 +1,6 @@
+/**
+ * Utilities to store and retrieve HAPI Routes
+ */
 import _glob from 'glob';
 import { ServerRoute } from '@hapi/hapi';
 import { extname, resolve } from 'path';

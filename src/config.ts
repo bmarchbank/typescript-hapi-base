@@ -1,3 +1,6 @@
+/**
+ * To store all server & plugin configurations with support for environment variables
+ */
 import * as HapiPino from 'hapi-pino';
 import { RegisterOptions } from 'hapi-swagger';
 import * as pack from '../package.json';

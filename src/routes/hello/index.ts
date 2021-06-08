@@ -1,3 +1,6 @@
+/**
+ * Example route for testing purposes
+ */
 import { Request, ResponseToolkit } from '@hapi/hapi';
 import Joi from 'joi';
 import { registerRoute } from '..';
