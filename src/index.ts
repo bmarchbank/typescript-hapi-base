@@ -1,5 +1,5 @@
 // use dotenv to support ".env" files
-import {config as dotenv} from 'dotenv';
+import { config as dotenv } from 'dotenv';
 dotenv();
 
 import * as Hapi from '@hapi/hapi';
@@ -8,7 +8,6 @@ import { getAllRoutes } from './routes';
 import plugins from './plugins';
 
 const init = async () => {
-
     // initialize the server
     const server = Hapi.server({
         port: config.server.port,
@@ -17,10 +16,10 @@ const init = async () => {
 
     // register plugins
     await server.register(plugins);
-    server.logger.info(`Successfully registered ${plugins.length} plugin(s).`)
+    server.logger.info(`Successfully registered ${plugins.length} plugin(s).`);
 
     // register all API routes
-    const routes = await getAllRoutes()
+    const routes = await getAllRoutes();
     server.route(routes);
     server.logger.info(`Successfully registered ${routes.length} route(s).`);
 
@@ -29,7 +28,6 @@ const init = async () => {
 };
 
 process.on('unhandledRejection', (err) => {
-
     console.log(err);
     process.exit(1);
 });
