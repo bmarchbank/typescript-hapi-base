@@ -10,8 +10,6 @@ const pinoPlugin: ServerRegisterPluginObject<HapiPino.Options> = {
     options: config.plugins.pino,
 }
 
-console.log('config is: ', config.plugins.swagger.info);
-
 const swaggerPlugin: ServerRegisterPluginObject<RegisterOptions> = {
     plugin: hapiswagger,
     options: {
