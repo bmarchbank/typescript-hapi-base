@@ -25,8 +25,10 @@ API Documentation can be accessed at `http://<host>:<port>/documentation`
 ## Requirements
 * Node version 14+
 
-## Development Scripts
+## Development
 
 * `npm run build` - Compiles all TS files and copies all JSON files in the `src/` directory to the `.dist/` directory
 * `npm run start` - Calls the entry-point file to start the application (`.dist/index.js`)
 * `npm run start:dev` - Uses [nodemon](https://www.npmjs.com/package/nodemon) to automatically re-build/restart the application when there are changes in the `src/` directory
+* `npm run test` - Executes all unit tests
+* `npm run test:watch` - Executes all unit tests each time there is a code change
