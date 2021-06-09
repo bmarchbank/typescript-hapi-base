@@ -14,7 +14,10 @@ export default {
     plugins: {
         pino: <HapiPino.Options>{
             level: process.env.PLUGINS_PINO_LOG_LEVEL || 'warn',
-            prettyPrint: !!process.env.PLUGINS_PINO_PRETTY_PRINT,
+            prettyPrint:
+                process.env.PLUGINS_PINO_PRETTY_PRINT === 'false'
+                    ? false
+                    : !!process.env.PLUGINS_PINO_PRETTY_PRINT,
             redact: ['req.headers.authorization'],
         },
         swagger: <RegisterOptions>{
