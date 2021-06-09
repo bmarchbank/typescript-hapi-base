@@ -8,7 +8,7 @@ import * as _ from 'lodash';
 
 export default {
     server: {
-        port: process.env.SERVER_PORT || 3000,
+        port: parseInt(process.env.SERVER_PORT, 10) || 3000,
         host: process.env.SERVER_HOST || 'localhost',
     },
     plugins: {
