@@ -42,7 +42,6 @@ export const registerRoute = (
  * @returns The list of registered HAPI Routes
  */
 export const getAllRoutes = async (): Promise<ServerRoute[]> => {
-    // convert the "callback" version of glob to return a promise instead
     const glob = promisify(_glob);
 
     // retrieve the current file extension (ts when in dev mode or js when compiled)
@@ -52,6 +51,5 @@ export const getAllRoutes = async (): Promise<ServerRoute[]> => {
     const routePaths = await glob(resolve(__dirname, `*/index${ext}`));
     await Promise.all(routePaths.map((route) => import(route)));
 
-    // return all routes that were registered
     return Array.from(routes.values());
 };
