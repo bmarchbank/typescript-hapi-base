@@ -9,7 +9,9 @@
         "start:dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/index.ts\"",
         "build:ts": "tsc --build",
         "clean:ts": "tsc --build --clean",
-        "copy-static-files": "cpx -C \"src/**/*.json\" \".dist\"",
+        "copy-static-files": "npm-run-all copy-static-src copy-static-package",
+        "copy-static-src": "cpx -C \"src/**/*.json\" \".dist\"",
+        "copy-static-package": "cpx -C \"package.json\" \".dist\"",
         "test": "jest",
         "test:watch": "jest --watch"
     },
