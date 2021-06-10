@@ -5,6 +5,7 @@
     "scripts": {
         "build": "npm-run-all clean:ts build:ts copy-static-files",
         "start": "node ./.dist/src/index.js",
+        "build:start": "npm-run-all build start",
         "start:dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --ignore \"src/**/*.spec.ts\" --exec \"ts-node src/index.ts\"",
         "build:ts": "tsc --build",
         "clean:ts": "tsc --build --clean",
