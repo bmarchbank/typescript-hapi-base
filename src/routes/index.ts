@@ -7,7 +7,7 @@ import { extname, resolve } from 'path';
 import { promisify } from 'util';
 
 // Store the HAPI route configurations
-const routes = new Set<ServerRoute>();
+export const routes = new Set<ServerRoute>();
 
 /**
  * Register a route so that it is accessible
