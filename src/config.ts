@@ -13,11 +13,11 @@ export default {
     },
     plugins: {
         pino: <HapiPino.Options>{
-            level: process.env.PLUGINS_PINO_LOG_LEVEL || 'warn',
+            level: process.env.PLUGINS_PINO_LOG_LEVEL || 'debug',
             prettyPrint:
                 process.env.PLUGINS_PINO_PRETTY_PRINT === 'false'
                     ? false
-                    : !!process.env.PLUGINS_PINO_PRETTY_PRINT,
+                    : true,
             redact: ['req.headers.authorization'],
         },
         swagger: <RegisterOptions>{

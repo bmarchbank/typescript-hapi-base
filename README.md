@@ -15,9 +15,9 @@ API Documentation can be accessed at `http://<host>:<port>/documentation`
 ### **Plugins**
 
 #### PINO
-* `PLUGINS_PINO_LOG_LEVEL` - Sets the level of logging that is output to the console.  Default: `warn`
+* `PLUGINS_PINO_LOG_LEVEL` - Sets the level of logging that is output to the console.  Default: `debug`
   * Possible Valies: `"fatal" | "error" | "warn" | "info" | "debug" | "trace"`
-* `PLUGINS_PINO_PRETTY_PRINT` - Set to a truthy value to turn on "pretty printing" to make the logs more readable for development & debugging.  Default: `false`
+* `PLUGINS_PINO_PRETTY_PRINT` - Enables "pretty printing" to make the logs more readable for development & debugging. Set to "false" to disable.  Default: `true`
 
 #### Swagger
 * `PLUGINS_SWAGGER_INFO_TITLE` - Sets the page title to be displayed on the Swagger documentation page.  Defaults to the package name in "package.json" but converted to "Start Case".
